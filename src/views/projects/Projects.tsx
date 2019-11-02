@@ -8,11 +8,53 @@ import vasttrafikImage from '../../assets/vasttrafik.png';
 import vasttrafikMyAccountImage from '../../assets/myaccountvasttrafik.png';
 
 const Projects: React.FC = () => {
+  setTimeout(() => animateCurly(), 10);
+
+  const extremeThreshold = (): number[] => {
+    const threshold = [0];
+    for (let i = 1; i <= 1000; i++) {
+      threshold.push(i / 1000);
+    }
+    return threshold;
+  }
+
+  const animateCurly = () => {
+    const curly3 = document.getElementById('curly3');
+    const curly4 = document.getElementById('curly4');
+    const projects = document.getElementById('projects');
+    const observer = new IntersectionObserver(([entry]) => {
+      if (curly3 && curly4) {
+        let dashOffset = Math.max(0, (250 - entry.intersectionRatio * 1427)).toFixed(0);
+        if (window.innerWidth > 490) {
+          dashOffset = Math.max(0, (500 - entry.intersectionRatio * 1427)).toFixed(0);
+        }
+        curly3.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
+        curly4.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
+      }
+    },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: extremeThreshold(),
+      });
+
+    if (projects && curly3 && curly4) {
+      observer.observe(projects);
+    }
+  }
 
   return (
     <div id="projects" className="projects pt-5">
       <div className="container">
-        <h1 className="mb-5">Professional projects</h1>
+        <div className="d-flex flex-nowrap justify-content-between">
+          <svg transform="scale(-1,1)" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path className="curly" id="curly3" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
+          </svg>
+          <svg height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path className="curly" id="curly4" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
+          </svg>
+        </div>
+        <h1 className="my-5">Professional projects</h1>
         <div className="mb-5">
           <Project
             title="Vasttrafik.se"

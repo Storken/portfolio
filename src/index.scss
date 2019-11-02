@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Sacramento|ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Snippet&display=swap');
 
 body {
   margin: 0;
-  font-family: 'ZCOOL XiaoWei', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Snippet', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,7 +48,7 @@ html {
 }
 
 @keyframes slide-in-y-animation {
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0);
+  }
 }

@@ -8,13 +8,13 @@ import cloud from '../../assets/cloud.svg';
 
 const Home: React.FC = () => {
   setTimeout(() => slideDownNameTag(), 2000);
-  setTimeout(() => fadeInIntroduction(), 3000); 
+  setTimeout(() => fadeInIntroduction(), 3000);
   setTimeout(() => animateMagic(), 10);
 
   const extremeThreshold = (): number[] => {
     const threshold = [0];
-    for(let i = 1; i <= 1000; i++) {
-      threshold.push(i/1000);
+    for (let i = 1; i <= 1000; i++) {
+      threshold.push(i / 1000);
     }
     return threshold;
   }
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     const home = document.getElementById('home');
     const observer = new IntersectionObserver(([entry]) => {
       if (magicCloud) {
-        magicCloud.setAttribute('style', 'left:'+(entry.intersectionRatio*300 - 240).toFixed(3)+'vw');
+        magicCloud.setAttribute('style', 'left:' + (entry.intersectionRatio * 300 - 240).toFixed(3) + 'vw');
       }
     },
       {
@@ -70,9 +70,9 @@ const Home: React.FC = () => {
           <h1>Hi there!</h1>
           <p>Welcome to my playgro.. I mean portfolio website, heh. On this site you will find information about me and get to see what magicClouds I'm working on both professionally and on my spare time.</p>
         </div>
-        <div id="magic" className="position-relative">
+        <div id="magic" className="position-relative d-none d-sm-block">
           <div className="position-absolute" id="magic-cloud">
-            <img alt="cloud" src={cloud} width="150"/>
+            <img alt="cloud" src={cloud} width="150" />
           </div>
           <h1 className="text-center position-relative">Magic</h1>
         </div>

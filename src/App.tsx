@@ -4,6 +4,7 @@ import Home from './views/home/Home';
 import About from './views/about/About';
 import Projects from './views/projects/Projects';
 import Loading from './views/loading/Loading';
+import Footer from './views/footer/Footer';
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Home />
       <About />
       <Projects />
+      <Footer />
       <Loading />
     </div>
   );

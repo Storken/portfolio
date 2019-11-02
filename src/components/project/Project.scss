@@ -4,5 +4,12 @@
         width: 100%;
         transform: translateX(-150vw);
     }
-}
 
+    .curly {
+        stroke-dasharray: 1310px;
+        stroke: black;
+        stroke-width: 1px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+    }
+}

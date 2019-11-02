@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap");
 .home {
   min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
 .home .profile {

@@ -20,9 +20,6 @@ const Navigation: React.FC = () => {
   return (
     <ul className="nav">
         <li className="nav-item">
-            <a className="nav-link text-dark" href="#home"><h2>Home</h2></a>
-        </li>
-        <li className="nav-item">
             <a className="nav-link text-dark" href="#about"><h2>About</h2></a>
         </li>
         <li className="nav-item">
