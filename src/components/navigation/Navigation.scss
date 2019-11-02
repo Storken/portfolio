@@ -1,0 +1,13 @@
+.nav {
+    .nav-item {
+        transform: translateX(-120vw);
+
+        &.active {
+
+        }
+
+        .nav-link {
+            font-family: 'Sacramento', cursive;
+        }
+    }
+}
