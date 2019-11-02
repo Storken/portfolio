@@ -2,6 +2,8 @@
     &__image {
         max-width: 600px;
         width: 100%;
+        min-height: 0;
+        height: auto;
         transform: translateX(-150vw);
     }
 

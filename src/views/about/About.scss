@@ -8,4 +8,8 @@
         stroke-linejoin: round;
         stroke-linecap: round;
     }
+
+    #curly1svg {
+        transform: scaleX(-1);
+    }
 }

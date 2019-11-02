@@ -49,7 +49,7 @@ const About: React.FC = () => {
       <div className="container">
 
         <div className="d-flex flex-nowrap justify-content-between">
-          <svg transform="scale(-1,1)" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="curly1svg" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="curly" id="curly1" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
           <svg height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@ const About: React.FC = () => {
           </svg>
         </div>
         <h1 className="mt-5">Background</h1>
-        <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers Technological University with a Bachelor degree in IT (programming and math basically) and with a Masters degree in Interaction design.</p>
+        <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers University of Technology with a Bachelor degree in Software Engineering and with a Masters degree in Interaction design.</p>
         <h1>Today</h1>
         <p className="mb-5">Currently I'm a resident in Gothenburg where I work and maintain a living by doing my favourite things, building beautiful websites.</p>
         <h1>Developer</h1>

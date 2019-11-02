@@ -61,8 +61,8 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
 
   return (
     <div className="project d-flex flex-column">
-      <a id={'project-' + props.index} href={props.link} className="d-flex flex-wrap flex-sm-nowrap text-dark text-decoration-none mb-3">
-        <img alt="screenshot of project" id={'project-' + props.index + '-image'} className="project__image flex-shrink-1 mr-5 mb-3" src={props.image} />
+      <a id={'project-' + props.index} href={props.link} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none mb-3 align-items-start">
+        <img alt="screenshot of project" id={'project-' + props.index + '-image'} className="project__image mr-5 mb-3" src={props.image} />
         <div className="d-flex flex-column">
           <h2 className="h4">{props.title}</h2>
           <div id={'project-' + props.index + '-separator'} className="project__separator border-bottom border-dark"></div>

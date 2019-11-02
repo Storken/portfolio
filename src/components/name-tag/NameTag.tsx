@@ -17,7 +17,7 @@ const NameTag: React.FC = () => {
 
   return (
     <div className="name-tag border shadow-sm rounded-lg d-inline-flex flex-no-wrap p-3 bg-white">
-        <img src={portrait} className="name-tag__portrait" width="100" alt="self portrait" />
+        <img src={portrait} className="name-tag__portrait" width="100" height="100" alt="self portrait" />
         <div className="d-flex flex-column ml-3 text-left">
             <div className="font-weight-bold mb-1">Magnus Junghard Huttu</div>
             <div className="mb-1">Fullstack developer</div>
