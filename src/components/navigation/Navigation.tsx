@@ -20,10 +20,10 @@ const Navigation: React.FC = () => {
   return (
     <ul className="nav">
         <li className="nav-item">
-            <a className="nav-link text-dark" href="#about"><h2>About</h2></a>
+            <a className="nav-link text-dark" href="#about">About</a>
         </li>
         <li className="nav-item">
-            <a className="nav-link text-dark" href="#projects"><h2>Projects</h2></a>
+            <a className="nav-link text-dark" href="#projects">Projects</a>
         </li>
     </ul>
   );
