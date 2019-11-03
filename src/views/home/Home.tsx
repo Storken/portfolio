@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           <h1>Hi there!</h1>
           <p>Welcome to my playgro.. I mean portfolio website, heh. On this site you will find information about me and get to see what I'm working on both professionally and on my spare time.</p>
         </div>
-        <div id="magic" className="position-relative d-none d-sm-block">
+        <div id="magic" className="position-relative d-none d-md-block">
           <div className="position-absolute" id="magic-cloud">
             <img alt="cloud" src={cloud} width="150" />
           </div>

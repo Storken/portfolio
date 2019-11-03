@@ -23,15 +23,16 @@ const About: React.FC = () => {
   const animateCurly = () => {
     const curly1 = document.getElementById('curly1');
     const curly2 = document.getElementById('curly2');
-    const about = document.getElementById('about');
+    const backgroundHeader = document.getElementById('background-header');
     const observer = new IntersectionObserver(([entry]) => {
       if (curly1 && curly2) {
-        let dashOffset = Math.max(0, (500 - entry.intersectionRatio * 1427)).toFixed(0);
-        if (window.innerWidth > 490) {
-          dashOffset = Math.max(0, (1000 - entry.intersectionRatio * 1427)).toFixed(0);
+        if (entry.intersectionRatio >= 0.9) {
+          curly1.classList.add('dash-in');
+          curly2.classList.add('dash-in');
+        } else {
+          curly1.classList.remove('dash-in');
+          curly2.classList.remove('dash-in');
         }
-        curly1.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
-        curly2.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
       }
     },
       {
@@ -40,8 +41,8 @@ const About: React.FC = () => {
         threshold: extremeThreshold(),
       });
 
-    if (about && curly1 && curly2) {
-      observer.observe(about);
+    if (backgroundHeader && curly1 && curly2) {
+      observer.observe(backgroundHeader);
     }
   }
   return (
@@ -56,7 +57,7 @@ const About: React.FC = () => {
             <path className="curly" id="curly2" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
         </div>
-        <h1 className="mt-5">Background</h1>
+        <h1 id="background-header" className="mt-5">Background</h1>
         <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers University of Technology with a Bachelor degree in Software Engineering and with a Masters degree in Interaction design.</p>
         <h1>Today</h1>
         <p className="mb-5">Currently I'm a resident in Gothenburg where I work and maintain a living by doing my favourite things, building beautiful websites.</p>

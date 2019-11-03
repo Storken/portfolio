@@ -1,10 +1,15 @@
 .project {
     &__image {
         max-width: 600px;
-        width: 100%;
-        min-height: 0;
         height: auto;
         transform: translateX(-150vw);
+
+        &>img {
+            max-width: 600px;
+            width: 100%;
+            min-height: 0;
+            height: auto;
+        }
     }
 
     .curly {

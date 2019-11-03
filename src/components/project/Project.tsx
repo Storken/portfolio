@@ -1,11 +1,13 @@
 import React from 'react';
 import './Project.scss';
+import githubImage from '../../assets/GitHub-Mark-120px-plus.png';
 
 interface IProjectProps {
   title: string;
   description: string;
   tags: string[];
   link: string;
+  github: string;
   image: string;
   index: number;
 }
@@ -51,27 +53,38 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
     }
   }
 
-  const tagList = (): JSX.Element[] => {
+  const tagList = (): JSX.Element => {
     const tags: JSX.Element[] = [];
     props.tags.forEach((tag: string, index: number) => {
       tags.push(<span key={'tag-' + index} className="badge badge-pill badge-info mr-1">{tag}</span>);
     })
-    return tags;
+    if (tags.length) {
+      return <div className="project__tags"><strong className="mr-1">Tags:</strong>{tags}</div>;
+    } else {
+      return <div></div>;
+    }
+  }
+
+  const repo = (): JSX.Element => {
+    if (props.github === '') {
+      return <span></span>;
+    }
+    return <a className="text-dark text-decoration-none" href={props.github}>code: <img alt="github link for this project" src={githubImage} width="20" height="20" /></a>
   }
 
   return (
     <div className="project d-flex flex-column">
-      <a id={'project-' + props.index} href={props.link} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none mb-3 align-items-start">
-        <img alt="screenshot of project" id={'project-' + props.index + '-image'} className="project__image mr-5 mb-3" src={props.image} />
+      <div id={'project-' + props.index} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none mb-3 align-items-start">
+        <a id={'project-' + props.index + '-image'} className="project__image mr-5 mb-3 d-block flex-shrink-0 w-100" href={props.link}>
+          <img alt="screenshot of project" src={props.image} />
+        </a>
         <div className="d-flex flex-column">
-          <h2 className="h4">{props.title}</h2>
+          <h2 className="h4 w-100 d-flex justify-content-between flex-nowrap"><a className="text-dark text-decoration-none" href={props.link}>{props.title}</a><small>{repo()}</small></h2>
           <div id={'project-' + props.index + '-separator'} className="project__separator border-bottom border-dark"></div>
           <p>{props.description}</p>
-          <div className="project__tags">
-            <strong className="mr-1">Tags:</strong>{tagList()}
-          </div>
+          {tagList()}
         </div>
-      </a>
+      </div>
       <svg height="40" viewBox="0 0 1141 181" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path className="curly" d="M0 84.9971C311 84.9974 178 52.9986 279 8.99706C428.773 -56.2529 592.718 323.392 687 117.997C743 -4 765 159.999 872 60.9971C969.402 -29.1241 898 60.9971 1141 60.9971" stroke="black" />
       </svg>

@@ -6,6 +6,7 @@ import heavencatImage from '../../assets/heavencat.png';
 import catatonicclubImage from '../../assets/catatonicclub.png';
 import vasttrafikImage from '../../assets/vasttrafik.png';
 import vasttrafikMyAccountImage from '../../assets/myaccountvasttrafik.png';
+import portfolioImage from '../../assets/portfolio.png';
 
 const Projects: React.FC = () => {
   setTimeout(() => animateCurly(), 10);
@@ -21,15 +22,16 @@ const Projects: React.FC = () => {
   const animateCurly = () => {
     const curly3 = document.getElementById('curly3');
     const curly4 = document.getElementById('curly4');
-    const projects = document.getElementById('projects');
+    const projects = document.getElementById('projects-header');
     const observer = new IntersectionObserver(([entry]) => {
       if (curly3 && curly4) {
-        let dashOffset = Math.max(0, (250 - entry.intersectionRatio * 1427)).toFixed(0);
-        if (window.innerWidth > 490) {
-          dashOffset = Math.max(0, (500 - entry.intersectionRatio * 1427)).toFixed(0);
+        if (entry.intersectionRatio >= 0.9) {
+          curly3.classList.add('dash-in');
+          curly4.classList.add('dash-in');
+        } else {
+          curly3.classList.remove('dash-in');
+          curly4.classList.remove('dash-in');
         }
-        curly3.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
-        curly4.setAttribute('style', 'stroke-dashoffset:' + dashOffset + 'px');
       }
     },
       {
@@ -54,13 +56,14 @@ const Projects: React.FC = () => {
             <path className="curly" id="curly4" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
         </div>
-        <h1 className="my-5">Professional projects</h1>
+        <h1 id="projects-header" className="my-5">Professional projects</h1>
         <div className="mb-5">
           <Project
             title="Vasttrafik.se"
             description="The main and information filled site about Västtrafik, a commuting service company located in Gothenburg, Sweden. I am a member of the development team, my role is fullstack but with a bit more focus on frontend."
-            tags={['C#', 'REST Api', '.Net framework', 'Episerver', 'CMS', 'Vue', 'Typescript', 'HTML', 'SCSS']}
+            tags={[]}/*['C#', 'REST Api', '.Net framework', 'Episerver', 'CMS', 'Vue', 'Typescript', 'HTML', 'SCSS']}*/
             link="https://vasttrafik.se"
+            github=""
             image={vasttrafikImage}
             index={1} />
         </div>
@@ -68,8 +71,9 @@ const Projects: React.FC = () => {
           <Project
             title="My account on vasttrafik.se"
             description="A part of vasttrafik.se where you can find information about your registered cards. I am a member of the development team, my role is fullstack but with a bit more focus on frontend."
-            tags={['C#', 'REST Api', '.Net core', 'Angular', 'Typescript', 'HTML', 'SCSS']}
+            tags={[]}/*['C#', 'REST Api', '.Net core', 'Angular', 'Typescript', 'HTML', 'SCSS']}*/
             link="https://mittkonto.vasttrafik.se"
+            github=""
             image={vasttrafikMyAccountImage}
             index={2} />
         </div>
@@ -80,8 +84,19 @@ const Projects: React.FC = () => {
             description="A statistics website which is used with a game called Cheezewizards. CWStats shows historical duels and shows what spells a player and their wizards most commonly uses. I've built the backend and frontend of this project."
             tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
             link="https://cwstats.com"
+            github="https://github.com/Storken/cwstats-repo"
             image={cwstatsImage}
             index={3} />
+        </div>
+        <div className="mb-5">
+          <Project
+            title="Portfolio website" 
+            description="A website where I can showcase my projects and tell a little about myself" 
+            tags={[]}
+            link="https://github.com/Storken/portfolio"
+            github="https://github.com/Storken/portfolio"
+            image={portfolioImage}
+            index={4}/>
         </div>
         <div className="mb-5">
           <Project
@@ -89,8 +104,9 @@ const Projects: React.FC = () => {
             description="A 3rd party website which is used with a game called Cryptokitties. Catatonic.club is used to automate a lot of tedious processes that the user otherwise has to spend a lot of time on. My part in the project has been to deliver a frontend solution both architectually and implementation wise."
             tags={['Vue', 'Typescript', 'HTML', 'SCSS']}
             link="https://catatonic.club"
+            github=""
             image={catatonicclubImage}
-            index={4} />
+            index={5} />
         </div>
         <div className="mb-5">
           <Project
@@ -98,8 +114,9 @@ const Projects: React.FC = () => {
             description="A 3rd party website which is used with a game called Cryptokitties. Heaven.cat can be used to search for cryptokitties with hidden attributes as all attributes are scraped and saved in an elasticsearch database. The site can also be used to save couples that you want to breed in the game alongside a bunch of other tools available. I've built the backend, frontend, set up Elasticsearch and Python workers to scrape the blockchain for cryptokitty data."
             tags={['C#', 'REST Api', 'ElasticSearch', '.Net Core', 'Python3.6', 'Vue', 'Typescript', 'HTML', 'SCSS']}
             link="https://heaven.cat/find?eyetype=r@0"
+            github=""
             image={heavencatImage}
-            index={5} />
+            index={6} />
         </div>
       </div>
     </div>
