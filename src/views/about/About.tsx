@@ -62,9 +62,9 @@ const About: React.FC = () => {
         <h1>Today</h1>
         <p className="mb-5">Currently I'm a resident in Gothenburg where I work and maintain a living by doing my favourite things, building beautiful websites.</p>
         <h1>Developer</h1>
-        <p className="mb-5">As a developer I strive to build efficient and maintainable code, which sounds like I'm taking an oath or something, but is probably the two most important things I know in my line of work today. No matter if I work in a react, vue or dotnet project, it should be easy to go back to code written a year ago and understand it without any hassle.</p>
+        <p className="mb-5">As a developer I strive to build <strong>efficient</strong> and <strong>maintainable</strong> code, which sounds like I'm taking an oath or something, but is probably the two most important things I know in my line of work today. No matter if I work in a react, vue or dotnet project, it should be easy to go back to code written a year ago and understand it without any hassle.</p>
         <h1>Style</h1>
-        <p className="mb-5">I LOVE working with animations, images and colors to create experiences for visitors. Finding out new ways to create a website that is ALIVE and not stale as a can of corn is what I believe frontend development is all about.</p>
+        <p className="mb-5">I <strong>love</strong> working with <strong>animations</strong>, <strong>images</strong> and <strong>colors</strong> to create fun and engaging experiences for visitors. Figuring out new ways to create a website that is <strong>alive</strong> and not stale as a can of corn is what I believe frontend development is all about.</p>
       </div>
     </div>
   );
