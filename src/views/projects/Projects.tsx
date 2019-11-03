@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
           <Project
             title="Portfolio website" 
             description="A website where I can showcase my projects and tell a little about myself" 
-            tags={[]}
+            tags={['React', 'Typescript', 'HTML', 'SCSS']}
             link="https://github.com/Storken/portfolio"
             github="https://github.com/Storken/portfolio"
             image={portfolioImage}
