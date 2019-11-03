@@ -23,7 +23,7 @@ const NameTag: React.FC = () => {
             <div className="mb-1">Fullstack developer</div>
             <a target="_blank" rel="noopener noreferrer" href="mailto:magnus@junghard.com" id="contact-me" className="contact-me mb-1">email</a>
             <div>
-            <a href="https://www.linkedin.com/in/magnus-huttu-4a0792b1/"
+            <a href="https://www.linkedin.com/in/magnushuttu/"
                 className="mb-1 mr-2"
                 ><img src={linkedinLogo} height="15" alt="linkedin profile"></img></a>
             <a href="https://github.com/Storken"
