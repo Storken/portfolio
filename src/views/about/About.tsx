@@ -46,7 +46,7 @@ const About: React.FC = () => {
         <h1 id="background-header" className="mt-5">Background</h1>
         <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers University of Technology with a Bachelor degree in Software Engineering and with a Masters degree in Interaction design.</p>
         <h1>Today</h1>
-        <p className="mb-5">Currently I'm a resident in Gothenburg where I work and maintain a living by doing my favourite things, building beautiful websites.</p>
+        <p className="mb-5">Currently I'm a resident in Gothenburg, Sweden, where I work and maintain a living by doing my favourite things, building beautiful websites.</p>
         <h1>Developer</h1>
         <p className="mb-5">As a developer I strive to build <strong>efficient</strong> and <strong>maintainable</strong> code, which sounds like I'm taking an oath or something, but is probably the two most important things I know in my line of work today. No matter if I work in a react, vue or dotnet project, it should be easy to go back to code written a year ago and understand it without any hassle.</p>
         <h1>Style</h1>
