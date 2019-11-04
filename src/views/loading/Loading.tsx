@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Loading.scss';
 
 const Loading: React.FC = () => {
-    setTimeout(() => hide(), 1200);
-    setTimeout(() => hideCompletely(), 1600);
-
-    let hide = () => {
+    const hide = () => {
         const loading = document.getElementById('loading');
         if (loading) {
             loading.classList.add('fade-out');
         }
     }
 
-    let hideCompletely = () => {
+    const hideCompletely = () => {
         const loading = document.getElementById('loading');
         if (loading) {
             loading.classList.add('d-none');
         }
     }
 
+    const start = () => {
+        const loading = document.getElementById('loading-svg');
+        if (loading) {
+            loading.classList.remove('d-none');
+        }
+    }
+
+    useEffect(() => {
+        start();
+        setTimeout(() => hide(), 1200);
+        setTimeout(() => hideCompletely(), 1600);
+    });
+
     return (
         <div id="loading" className="loading position-fixed">
-            <svg className="position-absolute" width="581" height="108" viewBox="0 0 581 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="loading-svg" className="position-absolute d-none" width="581" height="108" viewBox="0 0 581 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     id="loading1"
                     d="M49.72 106.152C48.472 106.44 47.176 106.632 45.832 106.728C44.488 106.92 43.288 107.016 42.232 107.016C39.16 107.016 36.472 106.44 34.168 105.288C31.864 104.232 29.848 102.792 28.12 100.968C26.488 99.144 25.096 97.08 23.944 94.776C22.888 92.472 22.072 90.072 21.496 87.576L0.76 7.08L9.256 4.91999L29.992 85.416C31.048 89.736 32.584 93.096 34.6 95.496C36.616 97.8 39.592 99.096 43.528 99.384L61.672 58.776V22.92H70.456V58.776L82.84 88.008C84.472 91.944 86.296 94.776 88.312 96.504C90.424 98.136 92.968 99.096 95.944 99.384L121.72 4.77599L129.928 7.224L103.144 106.152C101.896 106.44 100.6 106.632 99.256 106.728C97.912 106.92 96.712 107.016 95.656 107.016C92.776 107.016 90.184 106.536 87.88 105.576C85.672 104.712 83.704 103.56 81.976 102.12C80.248 100.584 78.76 98.808 77.512 96.792C76.264 94.68 75.208 92.472 74.344 90.168L66.136 69.432L49.72 106.152Z"

@@ -1,1 +1,1 @@
-.nav .nav-item{transform:translateX(-120vw)}
+.navigation .navigation-animatable{transform:translateX(-120vw)}.navigation .navigation-animatable.flip-x{transform:translateX(-120vw) scaleX(-1)}

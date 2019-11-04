@@ -4,7 +4,6 @@ import '../../styles/svgs.scss';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const About: React.FC = () => {
-  setTimeout(() => slideDown(), 3000);
 
   let slideDown = () => {
     const profile = document.getElementById('profile');
@@ -29,6 +28,7 @@ const About: React.FC = () => {
 
   useEffect(() => {
     addIntersectionObserverOn('background-header', animation);
+    setTimeout(() => slideDown(), 3000);
   });
 
   return (

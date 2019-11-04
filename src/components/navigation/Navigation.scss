@@ -1,12 +1,18 @@
-.nav {
-    .nav-item {
+.navigation {
+    .navigation-animatable {
         transform: translateX(-120vw);
 
-        &.active {
-
+        &.flip-x {
+            transform: translateX(-120vw) scaleX(-1);
         }
+    }
 
-        .nav-link {
+    .nav {
+        .nav-item {
+
+            &.active {}
+
+            .nav-link {}
         }
     }
 }
