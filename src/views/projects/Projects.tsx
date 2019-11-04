@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Projects.scss';
 import Project from '../../components/project/Project';
 import cwstatsImage from '../../assets/cwstats.png';
@@ -7,43 +7,27 @@ import catatonicclubImage from '../../assets/catatonicclub.png';
 import vasttrafikImage from '../../assets/vasttrafik.png';
 import vasttrafikMyAccountImage from '../../assets/myaccountvasttrafik.png';
 import portfolioImage from '../../assets/portfolio.png';
+import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const Projects: React.FC = () => {
-  setTimeout(() => animateCurly(), 10);
 
-  const extremeThreshold = (): number[] => {
-    const threshold = [0];
-    for (let i = 1; i <= 1000; i++) {
-      threshold.push(i / 1000);
-    }
-    return threshold;
-  }
-
-  const animateCurly = () => {
+  const animation = ([entry]: IntersectionObserverEntry[]) => {
     const curly3 = document.getElementById('curly3');
     const curly4 = document.getElementById('curly4');
-    const projects = document.getElementById('projects-header');
-    const observer = new IntersectionObserver(([entry]) => {
-      if (curly3 && curly4) {
-        if (entry.intersectionRatio >= 0.9) {
-          curly3.classList.add('dash-in');
-          curly4.classList.add('dash-in');
-        } else {
-          curly3.classList.remove('dash-in');
-          curly4.classList.remove('dash-in');
-        }
+    if (curly3 && curly4) {
+      if (entry.intersectionRatio >= 0.9) {
+        curly3.classList.add('dash-in');
+        curly4.classList.add('dash-in');
+      } else {
+        curly3.classList.remove('dash-in');
+        curly4.classList.remove('dash-in');
       }
-    },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: extremeThreshold(),
-      });
-
-    if (projects && curly3 && curly4) {
-      observer.observe(projects);
     }
   }
+
+  useEffect(() => {
+    addIntersectionObserverOn('projects-header', animation);
+  });
 
   return (
     <div id="projects" className="projects pt-5">
@@ -90,13 +74,13 @@ const Projects: React.FC = () => {
         </div>
         <div className="mb-5">
           <Project
-            title="Portfolio website" 
-            description="A website where I can showcase my projects and tell a little about myself" 
+            title="Portfolio website"
+            description="A website where I can showcase my projects and tell a little about myself"
             tags={['React', 'Typescript', 'HTML', 'SCSS']}
             link="https://github.com/Storken/portfolio"
             github="https://github.com/Storken/portfolio"
             image={portfolioImage}
-            index={4}/>
+            index={4} />
         </div>
         <div className="mb-5">
           <Project

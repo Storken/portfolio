@@ -7,8 +7,8 @@ import arrow from '../../assets/white-arrow.svg';
 import cloud from '../../assets/cloud.svg';
 
 const Home: React.FC = () => {
-  setTimeout(() => slideDownNameTag(), 2000);
-  setTimeout(() => fadeInIntroduction(), 3000);
+  setTimeout(() => slideDownNameTag(), 1200);
+  setTimeout(() => fadeInIntroduction(), 2100);
   setTimeout(() => animateMagic(), 10);
 
   const extremeThreshold = (): number[] => {

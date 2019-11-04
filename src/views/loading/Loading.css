@@ -18,43 +18,43 @@
 .loading #loading1 {
   stroke-dasharray: 719px;
   stroke-dashoffset: 719px;
-  animation: twirl 1.5s ease forwards;
+  animation: twirl 1s ease forwards;
 }
 
 .loading #loading2 {
   stroke-dasharray: 423px;
   stroke-dashoffset: 423px;
-  animation: twirl 1.5s ease .1s forwards;
+  animation: twirl 1s ease .1s forwards;
 }
 
 .loading #loading3 {
   stroke-dasharray: 226px;
   stroke-dashoffset: 226px;
-  animation: twirl 1.5s ease .2s forwards;
+  animation: twirl 1s ease .2s forwards;
 }
 
 .loading #loading4 {
   stroke-dasharray: 291px;
   stroke-dashoffset: 291px;
-  animation: twirl 1.5s ease .3s forwards;
+  animation: twirl 1s ease .3s forwards;
 }
 
 .loading #loading5 {
   stroke-dasharray: 415px;
   stroke-dashoffset: 415px;
-  animation: twirl 1.5s ease .4s forwards;
+  animation: twirl 1s ease .4s forwards;
 }
 
 .loading #loading6 {
   stroke-dasharray: 588px;
   stroke-dashoffset: 588px;
-  animation: twirl 1.5s ease .5s forwards;
+  animation: twirl 1s ease .5s forwards;
 }
 
 .loading #loading7 {
   stroke-dasharray: 423px;
   stroke-dashoffset: 423px;
-  animation: twirl 1.5s ease .6s forwards;
+  animation: twirl 1s ease .6s forwards;
 }
 
 .loading #loading1,

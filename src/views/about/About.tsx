@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.scss';
+import '../../styles/svgs.scss';
+import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const About: React.FC = () => {
-  setTimeout(() => animateCurly(), 10);
   setTimeout(() => slideDown(), 3000);
 
   let slideDown = () => {
@@ -12,45 +13,30 @@ const About: React.FC = () => {
     }
   }
 
-  const extremeThreshold = (): number[] => {
-    const threshold = [0];
-    for (let i = 1; i <= 1000; i++) {
-      threshold.push(i / 1000);
-    }
-    return threshold;
-  }
-
-  const animateCurly = () => {
+  const animation = ([entry]: IntersectionObserverEntry[]) => {
     const curly1 = document.getElementById('curly1');
     const curly2 = document.getElementById('curly2');
-    const backgroundHeader = document.getElementById('background-header');
-    const observer = new IntersectionObserver(([entry]) => {
-      if (curly1 && curly2) {
-        if (entry.intersectionRatio >= 0.9) {
-          curly1.classList.add('dash-in');
-          curly2.classList.add('dash-in');
-        } else {
-          curly1.classList.remove('dash-in');
-          curly2.classList.remove('dash-in');
-        }
+    if (curly1 && curly2) {
+      if (entry.intersectionRatio >= 0.9) {
+        curly1.classList.add('dash-in');
+        curly2.classList.add('dash-in');
+      } else {
+        curly1.classList.remove('dash-in');
+        curly2.classList.remove('dash-in');
       }
-    },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: extremeThreshold(),
-      });
-
-    if (backgroundHeader && curly1 && curly2) {
-      observer.observe(backgroundHeader);
     }
   }
+
+  useEffect(() => {
+    addIntersectionObserverOn('background-header', animation);
+  });
+
   return (
     <div id="about" className="about pt-5">
       <div className="container">
 
         <div className="d-flex flex-nowrap justify-content-between">
-          <svg id="curly1svg" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="curly1svg" className="flip-x" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="curly" id="curly1" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
           <svg height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">

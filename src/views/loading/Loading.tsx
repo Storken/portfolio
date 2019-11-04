@@ -2,8 +2,8 @@ import React from 'react';
 import './Loading.scss';
 
 const Loading: React.FC = () => {
-    setTimeout(() => hide(), 2000);
-    setTimeout(() => hideCompletely(), 2600);
+    setTimeout(() => hide(), 1200);
+    setTimeout(() => hideCompletely(), 1600);
 
     let hide = () => {
         const loading = document.getElementById('loading');

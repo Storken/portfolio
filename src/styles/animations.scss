@@ -1,0 +1,30 @@
+// animations
+.slide-in {
+    animation: slide-in-x-animation .5s forwards;
+}
+
+.fade-in {
+    animation: fade-in-animation .5s forwards;
+}
+
+.slide-down {
+    animation: slide-in-y-animation .5s forwards;
+}
+
+@keyframes fade-in-animation {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-x-animation {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-y-animation {
+    to {
+        transform: translateY(0);
+    }
+}

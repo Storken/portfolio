@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Project.scss';
 import githubImage from '../../assets/GitHub-Mark-120px-plus.png';
+import '../../utils/AnimationHelper';
+import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 interface IProjectProps {
   title: string;
@@ -13,36 +15,15 @@ interface IProjectProps {
 }
 
 const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
-  setTimeout(() => animate(), 10);
   const projectId = 'project-' + props.index;
 
-  const extremeThreshold = (): number[] => {
-    const threshold = [0];
-    for (let i = 1; i <= 100; i++) {
-      threshold.push(i / 100);
-    }
-    return threshold;
-  }
-
-  const animate = () => {
-    const project = document.getElementById(projectId);
+  const animation = ([entry]: IntersectionObserverEntry[]) => {
     const projectDescriptionSeparator = document.getElementById(projectId + '-separator');
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.intersectionRatio > 0.4) {
-        slideIn();
-      }
-      if (projectDescriptionSeparator) {
-        projectDescriptionSeparator.setAttribute('style', 'width:' + entry.intersectionRatio * 100 + '%');
-      }
-    },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: extremeThreshold(),
-      });
-
-    if (project) {
-      observer.observe(project);
+    if (entry.intersectionRatio > 0.4) {
+      slideIn();
+    }
+    if (projectDescriptionSeparator) {
+      projectDescriptionSeparator.setAttribute('style', 'width:' + entry.intersectionRatio * 100 + '%');
     }
   }
 
@@ -71,6 +52,10 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
     }
     return <a className="text-dark text-decoration-none" href={props.github}>code: <img alt="github link for this project" src={githubImage} width="20" height="20" /></a>
   }
+
+  useEffect(() => {
+    addIntersectionObserverOn(projectId, animation);
+  });
 
   return (
     <div className="project d-flex flex-column">

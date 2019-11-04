@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.scss';
 
 const Navigation: React.FC = () => {
-  setTimeout(() => slideIn(), 2100);
+  setTimeout(() => slideIn(), 1300);
 
   const slideIn = () => {
     const links = document.getElementsByClassName('nav-item');
