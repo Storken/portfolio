@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
           <div className="mb-5">
             <Project
               title="CWStats"
-              description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a CosmosDB maintained on Azure, a REST API in .Net core v2.2.7 which serves the data from the CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
+              description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a REST API in .Net core v2.2.7 which serves the data from a CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
               tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
               link="https://cwstats.com"
               github="https://github.com/Storken/cwstats-repo"
