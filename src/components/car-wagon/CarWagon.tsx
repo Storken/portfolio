@@ -15,7 +15,7 @@ const CarWagon: React.FC = () => {
       let calculatedRoad = (Math.max(((1 - entry.intersectionRatio - 0.65) * 100), 9)).toFixed(3);
       let calculatedCarPath2 = (Math.max((2015 * (1 - entry.intersectionRatio - 0.50) * 2), 0)).toFixed(3);
       let calculatedWagonPath2 = (Math.max((1894 * (1 - entry.intersectionRatio - 0.50) * 2), 0)).toFixed(3);
-      carwagon.setAttribute('style', 'left:' + (Math.max((1 - entry.intersectionRatio - 0.30) * 100, 10)).toFixed(3) + '%');
+      carwagon.setAttribute('style', 'left:' + ((1 - entry.intersectionRatio - 0.30) * 100).toFixed(3) + '%');
       road1.setAttribute('style', 'right:' + calculatedRoad + '%');
       road2.setAttribute('style', 'left:' + calculatedRoad + '%');
       carPath2.setAttribute('style', `stroke-dashoffset:${ calculatedCarPath2 }px`);

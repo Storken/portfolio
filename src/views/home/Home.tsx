@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   const animation = ([entry]: IntersectionObserverEntry[]) => {
     const magicCloud = document.getElementById('magic-cloud');
     if (magicCloud) {
-      magicCloud.setAttribute('style', 'left:' + (entry.intersectionRatio * 300 - 180).toFixed(3) + 'vw');
+      magicCloud.setAttribute('style', 'left:' + (Math.min((entry.intersectionRatio - 0.3) * 200, 70)).toFixed(3) + 'vw');
     }
   }
 

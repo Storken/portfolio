@@ -59,20 +59,17 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
 
   return (
     <div className="project d-flex flex-column">
-      <div id={'project-' + props.index} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none mb-3 align-items-start">
-        <a id={'project-' + props.index + '-image'} className="project__image mr-5 mb-3 d-block flex-shrink-0 w-100" href={props.link}>
+      <div id={'project-' + props.index} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none align-items-start">
+        <a id={'project-' + props.index + '-image'} className="project__image mr-lg-5 mb-3 mb-lg-0 d-block w-100" href={props.link}>
           <img alt="screenshot of project" src={props.image} />
         </a>
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column w-100">
           <h2 className="h4 w-100 d-flex justify-content-between flex-nowrap"><a className="text-dark text-decoration-none" href={props.link}>{props.title}</a><small>{repo()}</small></h2>
           <div id={'project-' + props.index + '-separator'} className="project__separator border-bottom border-dark"></div>
           <p>{props.description}</p>
           {tagList()}
         </div>
       </div>
-      <svg height="40" viewBox="0 0 1141 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path className="curly" d="M0 84.9971C311 84.9974 178 52.9986 279 8.99706C428.773 -56.2529 592.718 323.392 687 117.997C743 -4 765 159.999 872 60.9971C969.402 -29.1241 898 60.9971 1141 60.9971" stroke="black" />
-      </svg>
     </div>
   );
 }
