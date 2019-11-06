@@ -1,1 +1,1 @@
-.projects{padding-bottom:5rem}.projects .curly{stroke-dasharray:1427px;stroke:black;stroke-width:10px;stroke-linejoin:round;stroke-linecap:round;stroke-dashoffset:1427px;transition:stroke-dashoffset .5s}.projects .curly.dash-in{stroke-dashoffset:0}.projects #curly3svg{transform:scaleX(-1)}@keyframes dash-in-animation{to{stroke-dashoffset:0}}
+.projects{padding-bottom:5rem}.projects .tree{width:100%;height:auto}

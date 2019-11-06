@@ -45,3 +45,59 @@
   background-color: white;
   z-index: -1;
 }
+
+.home #carwagon {
+  width: 180px;
+  height: 55px;
+  bottom: 8px;
+}
+
+.home #car {
+  bottom: 1px;
+  left: 0;
+}
+
+.home #car-path1 {
+  stroke-dasharray: 1636px;
+  stroke-dashoffset: 1636px;
+}
+
+.home #car-path2 {
+  stroke-dasharray: 2015px;
+  stroke-dashoffset: 2015px;
+}
+
+.home #wagon-path1 {
+  stroke-dasharray: 2226px;
+  stroke-dashoffset: 2226px;
+}
+
+.home #wagon-path2 {
+  stroke-dasharray: 1894px;
+  stroke-dashoffset: 1894px;
+}
+
+.home #gas {
+  bottom: 8px;
+  left: 60px;
+}
+
+.home #wagon {
+  bottom: 0;
+  right: 0;
+}
+
+.home #road1,
+.home #road2 {
+  height: 1px;
+}
+
+.home #road1 {
+  bottom: 20px;
+  left: 11vw;
+}
+
+.home #road2 {
+  bottom: 0;
+  right: 11vw;
+}

@@ -1,28 +1,9 @@
 .projects {
     padding-bottom: 5rem;
 
-    .curly {
-        stroke-dasharray: 1427px;
-        stroke: black;
-        stroke-width: 10px;
-        stroke-linejoin: round;
-        stroke-linecap: round;
-        stroke-dashoffset: 1427px;
-        transition: stroke-dashoffset .5s;
-
-        &.dash-in {
-            stroke-dashoffset: 0;
-        }
+    .tree {
+        width: 100%;
+        height: auto;
     }
 
-    #curly3svg {
-        transform: scaleX(-1);
-    }
-
-}
-
-@keyframes dash-in-animation {
-    to {
-        stroke-dashoffset: 0;
-    }
 }

@@ -1,28 +1,40 @@
 .curly {
-  stroke-dasharray: 1427px;
   stroke: black;
   stroke-width: 10px;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+.curly--header {
+  stroke-dasharray: 1427px;
   stroke-dashoffset: 1427px;
   transition: stroke-dashoffset .5s;
 }
 
-.curly.dash-in {
-  stroke-dashoffset: 0;
-}
-
-.curly-nav {
-  stroke-dasharray: 1233px;
-  stroke: black;
-  stroke-width: 10px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  stroke-dashoffset: 1233px;
+.curly--nav {
   transition: stroke-dashoffset .5s;
+  stroke-dasharray: 1233px;
+  stroke-dashoffset: 1233px;
 }
 
-.curly-nav.dash-in {
+.curly--tree {
+  stroke-width: 20px;
+  transition: stroke-dashoffset 1s;
+  stroke-dasharray: 20905px;
+  stroke-dashoffset: 20905px;
+}
+
+.curly--tree.mobile {
+  stroke-width: 30px;
+  stroke-dasharray: 15333px;
+  stroke-dashoffset: 15333px;
+}
+
+.curly--tree.dash-in {
+  transition: stroke-dashoffset 1s;
+}
+
+.curly.dash-in {
   stroke-dashoffset: 0;
 }
 

@@ -32,15 +32,14 @@ const About: React.FC = () => {
   });
 
   return (
-    <div id="about" className="about pt-5">
+    <div id="about" className="about pb-5">
       <div className="container">
-
         <div className="d-flex flex-nowrap justify-content-between">
           <svg id="curly1svg" className="flip-x" height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path className="curly" id="curly1" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
+            <path className="curly curly--header" id="curly1" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
           <svg height="50" viewBox="0 0 764 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path className="curly" id="curly2" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
+            <path className="curly curly--header" id="curly2" d="M0 374H296C764.8 375.6 794 190 747 103C700 16.0001 561 -22 522 16.0003C472 64.7186 473 154 522 137C556 125.204 567 95 567 74" stroke="black" />
           </svg>
         </div>
         <h1 id="background-header" className="mt-5">Background</h1>
@@ -52,7 +51,7 @@ const About: React.FC = () => {
         <h1>Style</h1>
         <p className="mb-5">I <strong>love</strong> working with <strong>animations</strong>, <strong>images</strong> and <strong>colors</strong> to create fun and engaging experiences for visitors. Figuring out new ways to create a website that is <strong>alive</strong> and not stale as a can of corn is what I believe frontend development is all about.</p>
       </div>
-    </div>
+    </div >
   );
 }
 
