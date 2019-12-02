@@ -4,6 +4,7 @@ import NameTag from '../../components/name-tag/NameTag';
 import Navigation from '../../components/navigation/Navigation';
 import Hero from '../../components/hero/Hero';
 import arrow from '../../assets/white-arrow.svg';
+import arrowDown from '../../assets/arrow-down.svg';
 import cloud from '../../assets/cloud.svg';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
@@ -51,11 +52,12 @@ const Home: React.FC = () => {
         </div>
         <div id="introduction" className="introduction mb-5">
           <h1>Hi there!</h1>
-          <p>Welcome to my playgro.. I mean portfolio, heh. On this website you will get to know me a little bit and see what I'm working on both professionally and on my spare time.</p>
+          <p>Welcome to my playgro.. I mean portfolio, heh. On this website you will get to know me a little bit and see what I'm working on both professionally and on my spare time. I am currently a freelance frontend developer and you can get in touch with me through the links in the card above.</p>
         </div>
         <div id="magic" className="position-relative d-none d-md-block">
           <div className="position-absolute" id="magic-cloud">
             <img alt="cloud" src={cloud} width="150" />
+            <div className="scroll-text position-absolute d-flex justify-content-center align-items-center pt-5 font-weight-bold">Scroll down<img className="ml-2" width="20" alt="scroll down arrow" src={arrowDown}/></div>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const About: React.FC = () => {
           </svg>
         </div>
         <h1 id="background-header" className="mt-5">Background</h1>
-        <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers University of Technology with a Bachelor degree in Software Engineering and with a Masters degree in Interaction design.</p>
+        <p className="mb-5">I'm a fella born and raised in Gothenburg (Göteborg for you Swedes), at autumn 2018 I graduated from Chalmers University of Technology with a Master of Science in Software Engineering where the Masters degree is in Interaction design.</p>
         <h1>Today</h1>
         <p className="mb-5">Currently I'm a resident in Gothenburg, Sweden, where I work and maintain a living by doing my favourite things, building beautiful websites.</p>
         <h1>Developer</h1>

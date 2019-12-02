@@ -19,7 +19,7 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
 
   const animation = ([entry]: IntersectionObserverEntry[]) => {
     const projectDescriptionSeparator = document.getElementById(projectId + '-separator');
-    if (entry.intersectionRatio > 0.4) {
+    if (entry.intersectionRatio > 0.9) {
       slideIn();
     }
     if (projectDescriptionSeparator) {
@@ -60,7 +60,7 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
   return (
     <div className="project d-flex flex-column">
       <div id={'project-' + props.index} className="d-flex flex-wrap flex-lg-nowrap text-dark text-decoration-none align-items-start">
-        <a id={'project-' + props.index + '-image'} className="project__image mr-lg-5 mb-3 mb-lg-0 d-block w-100" href={props.link}>
+        <a id={'project-' + props.index + '-image'} className="project__image mr-lg-5 mb-3 mb-lg-0 d-block w-100 shadow" href={props.link}>
           <img alt="screenshot of project" src={props.image} />
         </a>
         <div className="d-flex flex-column w-100">

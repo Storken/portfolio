@@ -1,4 +1,4 @@
-export const threshold100 = (): number[] => {
+export const threshold1000 = (): number[] => {
     const threshold = [0];
     for (let i = 1; i <= 100; i++) {
         threshold.push(i / 100);
@@ -12,7 +12,7 @@ export const addIntersectionObserverOn = (elementId: string, observerInteraction
         {
             root: null,
             rootMargin: '0px',
-            threshold: threshold100(),
+            threshold: threshold1000(),
         });
 
     if (observedElement) {
