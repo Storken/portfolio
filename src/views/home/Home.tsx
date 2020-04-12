@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         </div>
         <div id="introduction" className="introduction mb-5">
           <h1>Hi there!</h1>
-          <p>Welcome to my playgro.. I mean portfolio, heh. On this website you will get to know me a little bit and see what I'm working on both professionally and on my spare time. I am currently a freelance frontend developer and you can get in touch with me through the links in the card above.</p>
+          <p>Welcome to my portfolio. On this website you will get to know me a little bit and see what I'm working on both professionally and on my spare time. I am currently a freelance frontend developer and you can get in touch with me through the links in the card above.</p>
         </div>
         <div id="magic" className="position-relative d-none d-md-block">
           <div className="position-absolute" id="magic-cloud">

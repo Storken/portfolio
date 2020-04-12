@@ -8,6 +8,7 @@ import catatonicclubImage from '../../assets/catatonicclub.png';
 import vasttrafikImage from '../../assets/vasttrafik.png';
 import vasttrafikMyAccountImage from '../../assets/myaccountvasttrafik.png';
 import portfolioImage from '../../assets/portfolio.png';
+import sendifyImage from '../../assets/sendify.png';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 import CarWagon from '../../components/car-wagon/CarWagon';
 import CoolSeparator from '../../components/cool-separator/CoolSeparator';
@@ -71,60 +72,71 @@ const Projects: React.FC = () => {
         <div className="my-3">
           <CoolSeparator />
         </div>
+        <Project
+          title="My account on vasttrafik.se"
+          description="A part of vasttrafik.se where you can find information about your registered cards. I am a member of the development team, my role is fullstack but with a bit more focus on frontend."
+          tags={[]}/*['C#', 'REST Api', '.Net core', 'Angular', 'Typescript', 'HTML', 'SCSS']}*/
+          link="https://mittkonto.vasttrafik.se"
+          github=""
+          image={vasttrafikMyAccountImage}
+          index={2} />
+        <div className="my-3">
+          <CoolSeparator />
+        </div>
         <div className="mb-5">
           <Project
-            title="My account on vasttrafik.se"
-            description="A part of vasttrafik.se where you can find information about your registered cards. I am a member of the development team, my role is fullstack but with a bit more focus on frontend."
-            tags={[]}/*['C#', 'REST Api', '.Net core', 'Angular', 'Typescript', 'HTML', 'SCSS']}*/
-            link="https://mittkonto.vasttrafik.se"
+            title="Sendify"
+            description="A company making it easier for small businesses to order freight services. I'm currently a part of their frontend team, building on their frontend application."
+            tags={[]}
+            link="https://sendify.se"
             github=""
-            image={vasttrafikMyAccountImage}
-            index={2} />
+            image={sendifyImage}
+            index={3} />
         </div>
         <CarWagon />
         <div className="mt-5" id="hobby-projects">
           <h1 className="mb-5">Hobby projects</h1>
-            <Project
-              title="CWStats"
-              description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a REST API in .Net core v2.2.7 which serves the data from a CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
-              tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
-              link="https://cwstats.com"
-              github="https://github.com/Storken/cwstats-repo"
-              image={cwstatsImage}
-              index={3} />
+          <Project
+            title="CWStats"
+            description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a REST API in .Net core v2.2.7 which serves the data from a CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
+            tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
+            link="https://cwstats.com"
+            github="https://github.com/Storken/cwstats-repo"
+            image={cwstatsImage}
+            index={4} />
           <div className="my-3">
             <CoolSeparator />
           </div>
-            <Project
-              title="Portfolio website"
-              description="A website where I can showcase my projects and tell a little about myself. There's a substantial amount of SVG, which I manipulate using css keyframes. They are all created from scratch by me as well."
-              tags={['React', 'Typescript', 'HTML', 'SCSS', 'SVG']}
-              link="https://github.com/Storken/portfolio"
-              github="https://github.com/Storken/portfolio"
-              image={portfolioImage}
-              index={4} />
+          <Project
+            title="Portfolio website"
+            description="A website where I can showcase my projects and tell a little about myself. There's a substantial amount of SVG, which I manipulate using css keyframes. They are all created from scratch by me as well."
+            tags={['React', 'Typescript', 'HTML', 'SCSS', 'SVG']}
+            link="https://github.com/Storken/portfolio"
+            github="https://github.com/Storken/portfolio"
+            image={portfolioImage}
+            index={5} />
           <div className="my-3">
             <CoolSeparator />
           </div>
-            <Project
-              title="Catatonic.club"
-              description="A 3rd party website which is used with a game called Cryptokitties. Catatonic.club is used to automate a lot of tedious processes that the user otherwise has to spend a lot of time on. My part in the project has been to deliver a frontend solution both architectually and implementation wise."
-              tags={['Vue', 'Typescript', 'HTML', 'SCSS']}
-              link="https://catatonic.club"
-              github=""
-              image={catatonicclubImage}
-              index={5} />
+          <Project
+            title="Catatonic.club"
+            description="A 3rd party website which is used with a game called Cryptokitties. Catatonic.club is used to automate a lot of tedious processes that the user otherwise has to spend a lot of time on. My part in the project has been to deliver a frontend solution both architectually and implementation wise."
+            tags={['Vue', 'Typescript', 'HTML', 'SCSS']}
+            link="https://catatonic.club"
+            github=""
+            image={catatonicclubImage}
+            index={6} />
           <div className="my-3">
             <CoolSeparator />
           </div>
-            <Project
-              title="Heaven.Cat"
-              description="I built this web application (heaven.cat) for a blockchain-game called Cryptokitties (cryptokitties.co) where you collect and breed kitties. The main purpose of the web application is to help the user find specific cats. The system was built with Elasticsearch in the bottom, serving as the database for both userdata and cryptocatdata. The cryptocatdata was scraped from the ethereum blockchain using python-workers. A REST-API built in Dotnet Core v2.1 was built on top of the DB which serves clean and simple models to the frontend, using JSON. The frontend was built with Vue, including typescript, html and scss. "
-              tags={['C#', 'REST Api', 'ElasticSearch', '.Net Core', 'Python3.6', 'Vue', 'Typescript', 'HTML', 'SCSS']}
-              link="https://heaven.cat/find?eyetype=r@0"
-              github=""
-              image={heavencatImage}
-              index={6} />
+          <Project
+            title="Heaven.Cat"
+            description="I built this web application (heaven.cat) for a blockchain-game called Cryptokitties (cryptokitties.co) where you collect and breed kitties. The main purpose of the web application is to help the user find specific cats. The system was built with Elasticsearch in the bottom, serving as the database for both userdata and cryptocatdata. The cryptocatdata was scraped from the ethereum blockchain using python-workers. A REST-API built in Dotnet Core v2.1 was built on top of the DB which serves clean and simple models to the frontend, using JSON. The frontend was built with Vue, including typescript, html and scss. "
+            tags={['C#', 'REST Api', 'ElasticSearch', '.Net Core', 'Python3.6', 'Vue', 'Typescript', 'HTML', 'SCSS']}
+            link="https://heaven.cat/find?eyetype=r@0"
+            github=""
+            image={heavencatImage}
+            index={7} />
         </div>
       </div>
     </div>

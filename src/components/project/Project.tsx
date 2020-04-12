@@ -19,7 +19,7 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
 
   const animation = ([entry]: IntersectionObserverEntry[]) => {
     const projectDescriptionSeparator = document.getElementById(projectId + '-separator');
-    if (entry.intersectionRatio > 0.9) {
+    if (entry.intersectionRatio > 0.7) {
       slideIn();
     }
     if (projectDescriptionSeparator) {
@@ -38,7 +38,7 @@ const Project: React.FC<IProjectProps> = (props: IProjectProps) => {
     const tags: JSX.Element[] = [];
     props.tags.forEach((tag: string, index: number) => {
       tags.push(<span key={'tag-' + index} className="badge badge-pill badge-info mr-1">{tag}</span>);
-    })
+    });
     if (tags.length) {
       return <div className="project__tags"><strong className="mr-1">Tags:</strong>{tags}</div>;
     } else {
