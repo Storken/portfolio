@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import xlgBg from '../../assets/bg_xlg.svg';
-import largeBg from '../../assets/bg_lg.svg';
-import smallBg from '../../assets/bg_small.svg';
-import mediumBg from '../../assets/bg_md.svg';
+import xlgBg from '../../assets/bg_xlg.png';
+import largeBg from '../../assets/bg_lg.png';
+import smallBg from '../../assets/bg_sm.png';
+import mediumBg from '../../assets/bg_md.png';
 import './Hero.scss';
 
 const Hero: React.FC = () => {

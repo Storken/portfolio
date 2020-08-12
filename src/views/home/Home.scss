@@ -28,7 +28,25 @@
     #magic-cloud {
         top: -10px;
         width: 150px;
-        height: 80px;
+        height: auto;
+
+        .animation-bounce {
+            animation: bounce infinite 5s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
 
         & + h1 {
             z-index: -2;

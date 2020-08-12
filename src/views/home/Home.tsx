@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const animation = ([entry]: IntersectionObserverEntry[]) => {
     const magicCloud = document.getElementById('magic-cloud');
     if (magicCloud) {
-      magicCloud.setAttribute('style', 'left:' + (Math.min((entry.intersectionRatio - 0.3) * 200, 70)).toFixed(3) + 'vw');
+      magicCloud.setAttribute('style', 'left:' + (Math.min((entry.intersectionRatio - 0.3) * 150, 60)).toFixed(3) + 'vw');
     }
   }
 
@@ -56,8 +56,8 @@ const Home: React.FC = () => {
         </div>
         <div id="magic" className="position-relative d-none d-md-block">
           <div className="position-absolute" id="magic-cloud">
-            <img alt="cloud" src={cloud} width="150" />
-            <div className="scroll-text position-absolute d-flex justify-content-center align-items-center pt-5 font-weight-bold">Scroll down<img className="ml-2" width="20" alt="scroll down arrow" src={arrowDown}/></div>
+            <img alt="cloud" src={cloud} width="150" height="83" />
+            <div className="scroll-text position-absolute d-flex justify-content-center align-items-center pt-5 font-weight-bold"><img className="ml-2 animation-bounce" width="30" alt="scroll down arrow" src={arrowDown}/></div>
           </div>
         </div>
       </div>
