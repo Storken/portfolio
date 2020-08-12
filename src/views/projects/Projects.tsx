@@ -7,7 +7,7 @@ import heavencatImage from '../../assets/heavencat.png';
 import catatonicclubImage from '../../assets/catatonicclub.png';
 import vasttrafikImage from '../../assets/vasttrafik.png';
 import vasttrafikMyAccountImage from '../../assets/myaccountvasttrafik.png';
-import portfolioImage from '../../assets/portfolio.png';
+import portfolioImage from '../../assets/portfolio2.png';
 import sendifyImage from '../../assets/sendify.png';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 import CarWagon from '../../components/car-wagon/CarWagon';
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
             title="Portfolio website"
             description="A website where I can showcase my projects and tell a little about myself. There's a substantial amount of SVG, which I manipulate using css keyframes. They are all created from scratch by me as well."
             tags={['React', 'Typescript', 'HTML', 'SCSS', 'SVG']}
-            link="https://github.com/Storken/portfolio"
+            link="https://junghard.com/"
             github="https://github.com/Storken/portfolio"
             image={portfolioImage}
             index={5} />
