@@ -3,7 +3,7 @@ import xlgBg from '../../assets/bg_xlg.png';
 import largeBg from '../../assets/bg_lg.png';
 import smallBg from '../../assets/bg_sm.png';
 import mediumBg from '../../assets/bg_md.png';
-import './Hero.scss';
+import './Hero.css';
 
 const Hero: React.FC = () => {
   const [bg, setBg] = useState(xlgBg);

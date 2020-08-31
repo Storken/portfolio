@@ -1,12 +1,9 @@
 .project__image {
-  transform: translateX(-150vw);
-}
-
-.project__image > img {
-  width: 100%;
-  min-height: 0;
-  height: auto;
-}
+  transform: translateX(-150vw); }
+  .project__image > img {
+    width: 100%;
+    min-height: 0;
+    height: auto; }
 
 .project .curly {
   stroke-dasharray: 1310px;
@@ -14,5 +11,4 @@
   stroke: black;
   stroke-width: 1px;
   stroke-linejoin: round;
-  stroke-linecap: round;
-}
+  stroke-linecap: round; }

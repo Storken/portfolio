@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Sacramento|Snippet&display=swap');
-@import './styles/animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Josefin+Sans:wght@500&family=Sacramento&display=swap');
+@import './styles/animations.css';
 
 body {
   margin: 0;
-  font-family: 'Snippet', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'DM Sans', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +13,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.h4 {
+  & > a {
+    font-family: 'Josefin Sans' !important;
+    font-weight: 500 !important;
+  }
 }
 
 h1 {

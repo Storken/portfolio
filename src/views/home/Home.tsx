@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Home.scss';
+import './Home.css';
 import NameTag from '../../components/name-tag/NameTag';
 import Navigation from '../../components/navigation/Navigation';
 import Hero from '../../components/hero/Hero';

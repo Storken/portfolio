@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './Navigation.scss';
-import '../../styles/animations.scss';
+import './Navigation.css';
+import '../../styles/animations.css';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const Navigation: React.FC = () => {

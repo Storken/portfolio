@@ -1,65 +1,53 @@
 .car-wagon #carwagon {
   width: 180px;
   height: 55px;
-  bottom: 8px;
-}
+  bottom: 8px; }
 
 .car-wagon #car {
   bottom: 1px;
-  left: 0;
-}
+  left: 0; }
 
 .car-wagon #car-path1 {
   stroke-width: 5px;
   stroke-dasharray: 1636px;
-  stroke-dashoffset: 1636px;
-}
+  stroke-dashoffset: 1636px; }
 
 .car-wagon #car-path2 {
   stroke-width: 5px;
   stroke-dasharray: 2015px;
-  stroke-dashoffset: 2015px;
-}
+  stroke-dashoffset: 2015px; }
 
 .car-wagon #wagon-path1 {
   stroke-width: 5px;
   stroke-dasharray: 2226px;
-  stroke-dashoffset: 2226px;
-}
+  stroke-dashoffset: 2226px; }
 
 .car-wagon #wagon-path2 {
   stroke-width: 5px;
   stroke-dasharray: 1894px;
-  stroke-dashoffset: 1894px;
-}
+  stroke-dashoffset: 1894px; }
 
 .car-wagon #gas-path {
   stroke-width: 5px;
   stroke-dasharray: 785px;
-  stroke-dashoffset: 785px;
-}
+  stroke-dashoffset: 785px; }
 
 .car-wagon #gas {
   bottom: 8px;
-  left: 60px;
-}
+  left: 60px; }
 
 .car-wagon #wagon {
   bottom: 0;
-  right: 0;
-}
+  right: 0; }
 
 .car-wagon #road1,
 .car-wagon #road2 {
-  height: 1px;
-}
+  height: 1px; }
 
 .car-wagon #road1 {
   bottom: 20px;
-  left: 11vw;
-}
+  left: 11vw; }
 
 .car-wagon #road2 {
   bottom: 0;
-  right: 11vw;
-}
+  right: 11vw; }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './NameTag.scss';
+import './NameTag.css';
 import portrait from '../../assets/magnus.png';
 import linkedinLogo from '../../assets/LI-In-Bug.png';
 import githubLogo from '../../assets/GitHub-Mark-120px-plus.png';

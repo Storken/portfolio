@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './About.scss';
-import '../../styles/svgs.scss';
+import './About.css';
+import '../../styles/svgs.css';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const About: React.FC = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './Projects.scss';
-import '../../styles/svgs.scss';
+import './Projects.css';
+import '../../styles/svgs.css';
 import Project from '../../components/project/Project';
 import cwstatsImage from '../../assets/cwstats.png';
 import heavencatImage from '../../assets/heavencat.png';
@@ -97,13 +97,13 @@ const Projects: React.FC = () => {
         <div className="mt-5" id="hobby-projects">
           <h1 className="mb-5">Hobby projects</h1>
           <Project
-            title="CWStats"
-            description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a REST API in .Net core v2.2.7 which serves the data from a CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
-            tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
-            link="https://cwstats.com"
-            github="https://github.com/Storken/cwstats-repo"
-            image={cwstatsImage}
-            index={4} />
+            title="Heaven.cat"
+            description="I built this web application (heaven.cat) for a blockchain-game called Cryptokitties (cryptokitties.co) where you collect and breed kitties. The main purpose of the web application is to help the user find specific cats. The system was built with Elasticsearch in the bottom, serving as the database for both userdata and cryptocatdata. The cryptocatdata was scraped from the ethereum blockchain using python-workers. A REST-API built in Dotnet Core v2.1 was built on top of the DB which serves clean and simple models to the frontend, using JSON. The frontend was built with Vue, including typescript, html and scss. "
+            tags={['C#', 'REST Api', 'ElasticSearch', '.Net Core', 'Python3.6', 'Vue', 'Typescript', 'HTML', 'SCSS']}
+            link="https://heaven.cat/find?eyetype=r@0"
+            github=""
+            image={heavencatImage}
+            index={7} />
           <div className="my-3">
             <CoolSeparator />
           </div>
@@ -130,13 +130,13 @@ const Projects: React.FC = () => {
             <CoolSeparator />
           </div>
           <Project
-            title="Heaven.Cat"
-            description="I built this web application (heaven.cat) for a blockchain-game called Cryptokitties (cryptokitties.co) where you collect and breed kitties. The main purpose of the web application is to help the user find specific cats. The system was built with Elasticsearch in the bottom, serving as the database for both userdata and cryptocatdata. The cryptocatdata was scraped from the ethereum blockchain using python-workers. A REST-API built in Dotnet Core v2.1 was built on top of the DB which serves clean and simple models to the frontend, using JSON. The frontend was built with Vue, including typescript, html and scss. "
-            tags={['C#', 'REST Api', 'ElasticSearch', '.Net Core', 'Python3.6', 'Vue', 'Typescript', 'HTML', 'SCSS']}
-            link="https://heaven.cat/find?eyetype=r@0"
-            github=""
-            image={heavencatImage}
-            index={7} />
+            title="CWStats"
+            description="During a Hackathon for a blockchain-game called CheezeWizards (cheezewizards.com) I built a web application called CWStats (cwstats.com). The main purpose of the webapp is to serve the user with information about other wizards so he/she can decide who to duel and what spells they should use in such a duel. The system was built with a REST API in .Net core v2.2.7 which serves the data from a CosmosDB to the frontend in clean and simple models using JSON. The frontend was built with Vue including typescript, html, scss."
+            tags={['C#', 'REST Api', '.Net Core', 'SQL', 'Vue', 'Typescript', 'HTML', 'SCSS']}
+            link="https://cwstats.com"
+            github="https://github.com/Storken/cwstats-repo"
+            image={cwstatsImage}
+            index={4} />
         </div>
       </div>
     </div>

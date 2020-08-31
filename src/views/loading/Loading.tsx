@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Loading.scss';
+import './Loading.css';
 
 const Loading: React.FC = () => {
     const hide = () => {

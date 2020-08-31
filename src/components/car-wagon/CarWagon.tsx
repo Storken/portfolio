@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './CarWagon.scss';
+import './CarWagon.css';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
 
 const CarWagon: React.FC = () => {

@@ -1,39 +1,27 @@
 .slide-in {
-  animation: slide-in-x-animation .5s forwards;
-}
+  animation: slide-in-x-animation .5s forwards; }
 
 .slide-in-flip-x {
-  animation: slide-in-flip-x-animation .5s forwards;
-}
+  animation: slide-in-flip-x-animation .5s forwards; }
 
 .fade-in {
-  animation: fade-in-animation .5s forwards;
-}
+  animation: fade-in-animation .5s forwards; }
 
 .slide-down {
-  animation: slide-in-y-animation .5s forwards;
-}
+  animation: slide-in-y-animation .5s forwards; }
 
 @keyframes fade-in-animation {
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes slide-in-x-animation {
   to {
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes slide-in-flip-x-animation {
   to {
-    transform: translateX(0) scaleX(-1);
-  }
-}
+    transform: translateX(0) scaleX(-1); } }
 
 @keyframes slide-in-y-animation {
   to {
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }

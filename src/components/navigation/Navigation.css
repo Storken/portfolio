@@ -1,7 +1,4 @@
 .navigation .navigation-animatable {
-  transform: translateX(-120vw);
-}
-
-.navigation .navigation-animatable.flip-x {
-  transform: translateX(-120vw) scaleX(-1);
-}
+  transform: translateX(-120vw); }
+  .navigation .navigation-animatable.flip-x {
+    transform: translateX(-120vw) scaleX(-1); }

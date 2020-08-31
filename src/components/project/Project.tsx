@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Project.scss';
+import './Project.css';
 import githubImage from '../../assets/GitHub-Mark-120px-plus.png';
 import '../../utils/AnimationHelper';
 import { addIntersectionObserverOn } from '../../utils/AnimationHelper';
